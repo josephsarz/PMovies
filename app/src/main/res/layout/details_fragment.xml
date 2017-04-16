@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aghedo.pmovies.ui.movie_details.DetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/shun"
+                android:background="@color/colorTeal"
+                android:elevation="@dimen/title_elevation"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/smargin"
+                android:text="@string/movie_title"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/movie_title_textSize" />
+
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="@dimen/shun"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginLeft="@dimen/smargin"
+                android:layout_marginTop="@dimen/smargin"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/poster"
+                android:layout_below="@id/title"
+                android:layout_marginLeft="@dimen/smargin"
+                android:layout_toRightOf="@id/poster"
+                android:textSize="@dimen/myear" />
+
+            <TextView
+                android:id="@+id/runtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/year"
+                android:layout_below="@id/year"
+                android:textSize="@dimen/mruntime"
+                android:textStyle="italic" />
+
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/year"
+                android:layout_below="@id/runtime"
+                android:textSize="@dimen/mrating" />
+
+            <view
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_width"
+                android:layout_above="@+id/overview"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/view_margin"
+                android:width="@dimen/view_width" />
+
+            <TextView
+                android:id="@+id/overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/poster"
+                android:layout_marginLeft="@dimen/smargin"
+                android:layout_marginRight="@dimen/smargin"
+                android:text="" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
